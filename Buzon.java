@@ -30,6 +30,9 @@ public class Buzon {
     
 }
 
+
+//Usar en otra clase para crear los buzones y depositar/retirar eventos
+/* 
 Buzon buzonEntrada = new Buzon("Entrada", -1);
 
 Buzon buzonAlertas = new Buzon("Alertas", -1);
@@ -43,4 +46,4 @@ Buzon[] buzonesConsolidacion = new Buzon[ns];
     int tam2;
     buzonesConsolidacion[i] = new Buzon("Consolidacion " + i, tam2);
     }   
-
+*/
