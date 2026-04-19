@@ -4,7 +4,7 @@ public class Evento {
     private int idSensor;
     private int consecutivo;
     private int tipoDestino;
-    private Boolean esFin;
+    private boolean esFin;
 
     public Evento(int idSensor, int consecutivo, int tipoDestino, Boolean esFin) {
         this.id = "S" + idSensor + "-E" + consecutivo;
@@ -36,7 +36,7 @@ public class Evento {
         return tipoDestino;
     }
 
-    public Boolean getEsFin() {
+    public boolean isEsFin() {
         return esFin;
     }
 }

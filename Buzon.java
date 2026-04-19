@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class Buzon {
-    private String nombre;
+    //private String nombre;
     private Queue<Evento> eventos;
     private int capacidad;
 
     public Buzon(String nombre, int capacidad) {
-        this.nombre = nombre;
+        //this.nombre = nombre;
         this.capacidad = capacidad;
         this.eventos = new LinkedList<>();
     }
