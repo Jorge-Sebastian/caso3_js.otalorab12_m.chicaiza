@@ -4,7 +4,7 @@ public class Buzon {
     private Queue<Evento> eventos;
     private int capacidad;
 
-    public Buzon(String nombre, int capacidad) {
+    public Buzon(int capacidad) {
         this.capacidad = capacidad;
         this.eventos = new LinkedList<>();
     }
@@ -27,20 +27,3 @@ public class Buzon {
     }
 
 }
-
-// Usar en otra clase para crear los buzones y depositar/retirar eventos
-/*
- * Buzon buzonEntrada = new Buzon("Entrada", -1);
- * 
- * Buzon buzonAlertas = new Buzon("Alertas", -1);
- * 
- * private int tam1;
- * Buzon buzonClasificacion = new Buzon("Clasificacion", tam1);
- * 
- * private int ns;
- * Buzon[] buzonesConsolidacion = new Buzon[ns];
- * for (int i = 0 ; i < ns; i++) {
- * int tam2;
- * buzonesConsolidacion[i] = new Buzon("Consolidacion " + i, tam2);
- * }
- */
