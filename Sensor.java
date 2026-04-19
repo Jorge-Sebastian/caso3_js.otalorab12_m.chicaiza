@@ -27,8 +27,7 @@ public class Sensor extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-            System.out.print("Sensor " + idSensor + " terminó.");
         }
+        System.out.print("Sensor " + idSensor + " terminó.");
     }
 }

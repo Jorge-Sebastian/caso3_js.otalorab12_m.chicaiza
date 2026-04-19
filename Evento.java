@@ -6,7 +6,7 @@ public class Evento {
     private int tipoDestino;
     private boolean esFin;
 
-    public Evento(int idSensor, int consecutivo, int tipoDestino, Boolean esFin) {
+    public Evento(int idSensor, int consecutivo, int tipoDestino, boolean esFin) {
         this.id = "S" + idSensor + "-E" + consecutivo;
         this.idSensor = idSensor;
         this.consecutivo = consecutivo;

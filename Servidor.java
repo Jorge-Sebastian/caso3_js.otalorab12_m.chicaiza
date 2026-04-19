@@ -16,11 +16,11 @@ public class Servidor extends Thread {
         System.out.println("Servidor " + idServidor + " está procesando el evento " + evento.getId() + ".");
         try {
             Thread.sleep(tiempo);
+            System.out.println("Servidor " + idServidor + " ha terminado de procesar el evento " + evento.getId() + ".");
         } catch (InterruptedException e) {
             System.out.println("Servidor " + idServidor + " fue interrumpido mientras procesaba el evento " + evento.getId() + ".");
             e.printStackTrace();
         }
-        System.out.println("Servidor " + idServidor + " ha terminado de procesar el evento " + evento.getId() + ".");
     }
 
     public void run() {

@@ -33,7 +33,7 @@ public class Administrador extends Thread {
                     if (esInofensivo()) {
                         buzonClasificacion.depositar(evento);
                         System.out.println("Administrador reviso el evento " + evento.getId()
-                                + " y lo enviò al buzon de clasificación.");
+                                + " y lo envió al buzon de clasificación.");
                     } else {
                         System.out.println("Administrador descartó el evento " + evento.getId() + ".");
                     }
@@ -47,7 +47,7 @@ public class Administrador extends Thread {
             for (int i = 0; i < numClasificadores; i++) {
                 buzonClasificacion.depositar(Evento.crearEventoFin());
             }
-            System.out.println("Administrador terminó y envio eventos de fin a los calsificadores.");
+            System.out.println("Administrador terminó y envió eventos de fin a los clasificadores.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
