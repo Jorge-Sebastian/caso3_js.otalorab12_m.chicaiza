@@ -6,7 +6,7 @@ public class Evento {
     private int tipoDestino;
     private Boolean esFin;
 
-    public Evento(String id, int idSensor, int consecutivo, int tipoDestino, Boolean esFin) {
+    public Evento(int idSensor, int consecutivo, int tipoDestino, Boolean esFin) {
         this.id = "S" + idSensor + "-E" + consecutivo;
         this.idSensor = idSensor;
         this.consecutivo = consecutivo;
@@ -15,7 +15,9 @@ public class Evento {
     }
 
     public static Evento crearEventoFin() {
-        return new Evento("FIN", -1, -1, -1, true);
+        Evento fin = new Evento(-1, -1, -1, true);
+        fin.id = "FIN";
+        return fin;
     }
 
     public String getId() {
