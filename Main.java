@@ -37,6 +37,9 @@ public class Main {
             totalEventos += numBaseEventos * i;
         }
 
+        // Inicializar clasificadores
+        Clasificador.inicializar(numClasificadores);
+
         // Crear sensores
         Sensor[] sensores = new Sensor[numSensores];
         for (int i = 0; i < numSensores; i++) {
