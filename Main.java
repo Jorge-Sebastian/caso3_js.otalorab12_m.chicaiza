@@ -108,7 +108,7 @@ public class Main {
             servidores[i].join();
         }
 
-        System.out.println("El sistema termino correctamente.");
+        System.out.println("El sistema terminó correctamente.");
 
     }
 
