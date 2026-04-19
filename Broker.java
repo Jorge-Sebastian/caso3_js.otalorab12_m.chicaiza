@@ -6,6 +6,7 @@ public class Broker extends Thread {
     private Buzon buzonClasificacion;
     private int totalEventos;
     private Random random;
+
     private boolean esAnomalo() {
         int numero = random.nextInt(201); // Genera un número entre 0 y 200
         return numero % 8 == 0; // Un evento es anómalo si el número es divisible por 8
@@ -18,7 +19,7 @@ public class Broker extends Thread {
         this.totalEventos = totalEventos;
         this.random = new Random();
     }
- 
+
     public void run() {
         int procesados = 0;
 
@@ -43,7 +44,7 @@ public class Broker extends Thread {
         try {
             Evento fin = Evento.crearEventoFin();
             buzonAlertas.depositar(fin);
-            System.out.println("Broker terminó y envió evento de fin al buzon de alertas.");
+            System.out.println("Broker terminó y envió evento de fin al administrador por el buzon de alertas.");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
