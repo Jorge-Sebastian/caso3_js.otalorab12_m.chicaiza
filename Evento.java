@@ -1,36 +1,40 @@
 public class Evento {
-    private int id;
-    private String nombre;
-    private String descripcion;
 
-    public Evento(int id, String nombre, String descripcion) {
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
+    private String id;
+    private int idSensor;
+    private int consecutivo;
+    private int tipoDestino;
+    private Boolean esFin;
+
+    public Evento(String id, int idSensor, int consecutivo, int tipoDestino, Boolean esFin) {
+        this.id = "S" + idSensor + "-E" + consecutivo;
+        this.idSensor = idSensor;
+        this.consecutivo = consecutivo;
+        this.tipoDestino = tipoDestino;
+        this.esFin = esFin;
     }
 
-    public int getId() {
+    public static Evento crearEventoFin() {
+        return new Evento("FIN", -1, -1, -1, true);
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getIdSensor() {
+        return idSensor;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getConsecutivo() {
+        return consecutivo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getTipoDestino() {
+        return tipoDestino;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public Boolean getEsFin() {
+        return esFin;
     }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
 }
