@@ -28,6 +28,6 @@ public class Sensor extends Thread {
                 e.printStackTrace();
             }
         }
-        System.out.print("Sensor " + idSensor + " terminó.");
+        System.out.println("Sensor " + idSensor + " terminó.");
     }
 }
