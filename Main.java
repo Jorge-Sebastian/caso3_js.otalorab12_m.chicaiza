@@ -4,12 +4,15 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        if (args.length == 0) {
-            System.out.println("No se ha proporcionado un archivo de configuración.");
-            return;
-        }
+        String archivo;
 
-        String archivo = args[0];
+        if (args.length == 0) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Ingrese el nombre del archivo de configuración: ");
+            archivo = scanner.nextLine();
+        } else {
+            archivo = args[0];
+        }
 
         Properties properties = new Properties();
         properties.load(new FileReader(archivo));
