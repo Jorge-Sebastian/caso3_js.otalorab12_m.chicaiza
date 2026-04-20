@@ -7,9 +7,10 @@ public class Main {
         String archivo;
 
         if (args.length == 0) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Ingrese el nombre del archivo de configuración: ");
-            archivo = scanner.nextLine();
+            try (Scanner scanner = new Scanner(System.in)) {
+                System.out.print("Ingrese el nombre del archivo de configuración: ");
+                archivo = scanner.nextLine();
+            }
         } else {
             archivo = args[0];
         }
